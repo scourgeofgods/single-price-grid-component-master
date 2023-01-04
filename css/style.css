@@ -1,0 +1,153 @@
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Cyan: hsl(179, 62%, 43%)
+- Bright Yellow: hsl(71, 73%, 54%)
+
+### Neutral
+
+- Light Gray: hsl(204, 43%, 93%)
+- Grayish Blue: 
+
+## Typography
+
+### Body Copy
+
+- Font size: 16px
+
+### Font
+
+- Family: [Karla](https://fonts.google.com/specimen/Karla)
+- Weights: 400, 700 */
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 62.5%;
+  --fw-bold: 700;
+  --fw-regular: 400;
+  --ff-content: "Karla", sans-serif;
+  --clr-cyn: hsl(179, 62%, 43%);
+  --clr-cyn-light: hsla(179, 50%, 45%, 0.752);
+  --clr-bright-yellow: hsl(71, 73%, 54%);
+  --clr-light-gray: hsl(204, 43%, 93%);
+  --clr-light-blue: hsl(218, 22%, 67%);
+}
+
+body {
+  font-family: var(--ff-content);
+  background-color: var(--clr-light-gray);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+}
+.pricing {
+  width: 90rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  box-shadow: 2px 2px 30px 5px var(--clr-light-blue);
+  border-radius: 1rem;
+}
+.pricing > div {
+  display: grid;
+  align-items: center;
+  gap: 2rem;
+  padding: 4rem;
+}
+.pricing__community {
+  background-color: var(--clr-light-gray);
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+  grid-column: 1/-1;
+}
+.pricing__community--title {
+  font-size: 2rem;
+  letter-spacing: 1px;
+  color: var(--clr-cyn);
+  font-weight: var(--fw-bold);
+}
+.pricing__community--guarantee {
+  font-size: 1.8rem;
+  color: var(--clr-bright-yellow);
+  font-weight: var(--fw-bold);
+}
+.pricing__community--description {
+  font-size: 1.6rem;
+  font-weight: var(--fw-regular);
+  color: var(--clr-light-blue);
+}
+.pricing__subscription {
+  background-color: var(--clr-cyn);
+  color: var(--clr-light-gray);
+  border-bottom-left-radius: 1rem;
+}
+.pricing__subscription--title {
+  font-size: 1.8rem;
+  font-weight: var(--fw-bold);
+}
+.pricing__subscription--price span:first-child {
+  font-size: 2.8rem;
+  font-weight: var(--fw-bold);
+  margin-right: 1rem;
+}
+.pricing__subscription--price span:last-child {
+  font-size: 1.6rem;
+  color: var(--clr-light-gray);
+}
+
+.pricing__subscription--access {
+  font-size: 1.4rem;
+  color: var(--clr-light-gray);
+  margin: -2.4rem 0 0.5rem 0;
+}
+.pricing__subscription--sing-up {
+  padding: 1rem 2rem;
+  text-align: center;
+  text-decoration: none;
+  color: var(--clr-light-gray);
+  font-size: 1.5rem;
+  background-color: var(--clr-bright-yellow);
+  border-radius: 1rem;
+}
+.pricing__why {
+  background-color: var(--clr-cyn-light);
+  border-bottom-right-radius: 1rem;
+  color: var(--clr-light-gray);
+}
+.pricing__why--title {
+  font-size: 2rem;
+}
+.pricing__why--list {
+  list-style: none;
+  display: grid;
+  row-gap: 0.1rem;
+}
+.pricing__why--list li {
+  font-size: 1.3rem;
+}
+@media (max-width: 1024px) {
+  .pricing {
+    grid-template-columns: 1fr;
+    max-width: 45rem;
+  }
+  .pricing__subscription {
+    border-radius: 0;
+  }
+}
